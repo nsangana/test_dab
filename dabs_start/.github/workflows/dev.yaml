@@ -39,7 +39,7 @@ jobs:
       - shell: bash
         name: Run pipeline update
         run: |
-          databricks bundle run dagm_dabs_demo_job --refresh-all 2>&1 | tee output.log
+          databricks bundle run dabs_start_job --refresh-all 2>&1 | tee output.log
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENV: dev
