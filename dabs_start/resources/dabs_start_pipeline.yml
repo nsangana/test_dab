@@ -1,0 +1,12 @@
+# The main pipeline for dabs_start
+resources:
+  pipelines:
+    dabs_start_pipeline:
+      name: dabs_start_pipeline
+      target: dabs_start_${bundle.environment}
+      libraries:
+        - notebook:
+            path: ../src/dlt_pipeline.ipynb
+
+      configuration:
+        bundle.sourcePath: /Workspace/${workspace.file_path}/src
